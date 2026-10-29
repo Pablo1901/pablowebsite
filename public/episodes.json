@@ -1,0 +1,502 @@
+{
+  "channel": {
+    "title": "IMPACT Radio Show",
+    "description": "PABLO is an upcoming DJ and Big Room Techno and Trance producer from Poland, currently based in Germany. As the host of the weekly “IMPACT” radio show, he presents his favorite new Electronic Dance Music and shares his passion for powerful but also melodic sounds from all over the world.",
+    "link": "http://www.tiktok.com/@dj_pabloo_",
+    "image": "https://i1.sndcdn.com/avatars-TzMaKNjhTxKtlth5-GVCWyA-t1000x1000.jpg"
+  },
+  "episodes": [
+    {
+      "id": "tag:soundcloud,2010:tracks/2415534861",
+      "title": "IMPACT Radio Show 005",
+      "url": "https://soundcloud.com/pablo1901/impact-radio-005",
+      "publishedAt": "2026-10-09T17:00:13.000Z",
+      "duration": "01:00:40",
+      "durationSeconds": 3640,
+      "artwork": "https://i1.sndcdn.com/artworks-Zd38rHA5PEbKIopq-gpA9Lw-t500x500.jpg",
+      "show": "IMPACT"
+    },
+    {
+      "id": "tag:soundcloud,2010:tracks/2411467518",
+      "title": "IMPACT Radio Show 004",
+      "url": "https://soundcloud.com/pablo1901/impact-radio-show-004",
+      "publishedAt": "2026-10-02T17:00:36.000Z",
+      "duration": "00:58:05",
+      "durationSeconds": 3485,
+      "artwork": "https://i1.sndcdn.com/artworks-N2bcnMLy0lpzv3zC-b0vlRg-t500x500.jpg",
+      "show": "IMPACT"
+    },
+    {
+      "id": "tag:soundcloud,2010:tracks/2406102567",
+      "title": "IMPACT Radio Show 003",
+      "url": "https://soundcloud.com/pablo1901/impact-radio-show-003",
+      "publishedAt": "2026-09-25T17:00:36.000Z",
+      "duration": "00:58:46",
+      "durationSeconds": 3526,
+      "artwork": "https://i1.sndcdn.com/artworks-YGzE9XQrxqEUXwFX-CHPQEQ-t500x500.jpg",
+      "show": "IMPACT"
+    },
+    {
+      "id": "tag:soundcloud,2010:tracks/2401613268",
+      "title": "IMPACT Radio Show 002",
+      "url": "https://soundcloud.com/pablo1901/impact-radio-show-002",
+      "publishedAt": "2026-09-18T17:01:14.000Z",
+      "duration": "01:00:39",
+      "durationSeconds": 3639,
+      "artwork": "https://i1.sndcdn.com/artworks-jwQYMDWZzyJL5bgB-xcOs4Q-t500x500.jpg",
+      "show": "IMPACT"
+    },
+    {
+      "id": "tag:soundcloud,2010:tracks/2396920836",
+      "title": "IMPACT Radio Show 001",
+      "url": "https://soundcloud.com/pablo1901/impact-radio-1",
+      "publishedAt": "2026-09-11T17:00:34.000Z",
+      "duration": "01:00:44",
+      "durationSeconds": 3644,
+      "artwork": "https://i1.sndcdn.com/artworks-9tjteyEg4SLGbQFz-PUtQSg-t500x500.jpg",
+      "show": "IMPACT"
+    },
+    {
+      "id": "tag:soundcloud,2010:tracks/2394018072",
+      "title": "DJ Pablo on Stage 40 | Trance, Tech House & Peak Time Techno Mix",
+      "url": "https://soundcloud.com/pablo1901/dj-pablo-on-stage-40",
+      "publishedAt": "2026-09-04T18:00:36.000Z",
+      "duration": "00:58:54",
+      "durationSeconds": 3534,
+      "artwork": "https://i1.sndcdn.com/artworks-bka0YIBAhPSft09O-zXmhgA-t500x500.jpg",
+      "show": "Mix"
+    },
+    {
+      "id": "tag:soundcloud,2010:tracks/2387500299",
+      "title": "DJ Pablo on Stage 39 | Trance, Tech House & Peak Time Techno Mix",
+      "url": "https://soundcloud.com/pablo1901/dj-pablo-on-stage-39",
+      "publishedAt": "2026-08-28T18:00:01.000Z",
+      "duration": "01:00:01",
+      "durationSeconds": 3601,
+      "artwork": "https://i1.sndcdn.com/artworks-bohEWkqOzkDOjyQy-D8gedg-t500x500.jpg",
+      "show": "Mix"
+    },
+    {
+      "id": "tag:soundcloud,2010:tracks/2383896867",
+      "title": "DJ Pablo on Stage 38 | Trance, Tech House & Peak Time Techno Mix",
+      "url": "https://soundcloud.com/pablo1901/dj-pablo-on-stage-38",
+      "publishedAt": "2026-08-21T18:00:01.000Z",
+      "duration": "01:00:01",
+      "durationSeconds": 3601,
+      "artwork": "https://i1.sndcdn.com/artworks-HMXVXKOX1hKl479H-HciMKQ-t500x500.jpg",
+      "show": "Mix"
+    },
+    {
+      "id": "tag:soundcloud,2010:tracks/2379166433",
+      "title": "DJ Pablo on Stage 37 | Trance, Tech House & Peak Time Techno Mix",
+      "url": "https://soundcloud.com/pablo1901/dj-pablo-on-stage-37",
+      "publishedAt": "2026-08-14T18:00:19.000Z",
+      "duration": "00:59:38",
+      "durationSeconds": 3578,
+      "artwork": "https://i1.sndcdn.com/artworks-ge2b2rkKpUgxx1lM-FLammA-t500x500.jpg",
+      "show": "Mix"
+    },
+    {
+      "id": "tag:soundcloud,2010:tracks/2372310119",
+      "title": "DJ Pablo on Stage 36 | Trance, Tech House & Peak Time Techno Mix",
+      "url": "https://soundcloud.com/pablo1901/dj-pablo-on-stage-36",
+      "publishedAt": "2026-07-31T18:00:39.000Z",
+      "duration": "01:00:22",
+      "durationSeconds": 3622,
+      "artwork": "https://i1.sndcdn.com/artworks-1dE8zb4yGhOVSqnh-e8jokw-t500x500.jpg",
+      "show": "Mix"
+    },
+    {
+      "id": "tag:soundcloud,2010:tracks/2366713967",
+      "title": "DJ Pablo on Stage 35 | Trance, Tech House & Peak Time Techno Mix",
+      "url": "https://soundcloud.com/pablo1901/dj-pablo-on-stage-35",
+      "publishedAt": "2026-07-24T18:00:06.000Z",
+      "duration": "00:59:41",
+      "durationSeconds": 3581,
+      "artwork": "https://i1.sndcdn.com/artworks-pCldOxukrPbiQ7Im-42bkUw-t500x500.jpg",
+      "show": "Mix"
+    },
+    {
+      "id": "tag:soundcloud,2010:tracks/2360728145",
+      "title": "DJ Pablo on Stage 34 | Special PABLO Mix",
+      "url": "https://soundcloud.com/pablo1901/dj-pablo-on-stage-34",
+      "publishedAt": "2026-07-17T18:00:24.000Z",
+      "duration": "01:01:23",
+      "durationSeconds": 3683,
+      "artwork": "https://i1.sndcdn.com/artworks-rpN0MOMJAlx5yCQU-DgnpBg-t500x500.jpg",
+      "show": "Mix"
+    },
+    {
+      "id": "tag:soundcloud,2010:tracks/2356493390",
+      "title": "DJ Pablo on Stage 33 | Melodic Techno, Trance, Tech House & Peak Time Mix",
+      "url": "https://soundcloud.com/pablo1901/dj-pablo-on-stage-33",
+      "publishedAt": "2026-07-10T18:00:20.000Z",
+      "duration": "01:01:06",
+      "durationSeconds": 3666,
+      "artwork": "https://i1.sndcdn.com/artworks-6soRTUf8BiyXjYnf-FmTgBA-t500x500.jpg",
+      "show": "Mix"
+    },
+    {
+      "id": "tag:soundcloud,2010:tracks/2350777472",
+      "title": "DJ Pablo on Stage 32 | Melodic Techno, Trance, Tech House & Peak Time Mix",
+      "url": "https://soundcloud.com/pablo1901/dj-pablo-on-stage-32",
+      "publishedAt": "2026-07-03T18:00:26.000Z",
+      "duration": "01:00:10",
+      "durationSeconds": 3610,
+      "artwork": "https://i1.sndcdn.com/artworks-L79yAON2KZTDMu6Z-6WLriA-t500x500.jpg",
+      "show": "Mix"
+    },
+    {
+      "id": "tag:soundcloud,2010:tracks/2345504831",
+      "title": "DJ Pablo on Stage 31 | Melodic Techno, Trance, Tech House & Peak Time Mix",
+      "url": "https://soundcloud.com/pablo1901/dj-pablo-on-stage-31",
+      "publishedAt": "2026-06-26T18:00:12.000Z",
+      "duration": "00:59:43",
+      "durationSeconds": 3583,
+      "artwork": "https://i1.sndcdn.com/artworks-EKIKMtwUvANj9c5g-Wk0bUw-t500x500.jpg",
+      "show": "Mix"
+    },
+    {
+      "id": "tag:soundcloud,2010:tracks/2342102384",
+      "title": "DJ Pablo on Stage 30 | Melodic Techno, Trance, Tech House & Peak Time Mix",
+      "url": "https://soundcloud.com/pablo1901/dj-pablo-on-stage-30",
+      "publishedAt": "2026-06-19T18:00:22.000Z",
+      "duration": "00:59:00",
+      "durationSeconds": 3540,
+      "artwork": "https://i1.sndcdn.com/artworks-GpF3GztOPRz2EZ9M-0mz2lg-t500x500.jpg",
+      "show": "Mix"
+    },
+    {
+      "id": "tag:soundcloud,2010:tracks/2336305175",
+      "title": "DJ Pablo on Stage 29 | Melodic Techno, Trance, Tech House & Peak Time Mix",
+      "url": "https://soundcloud.com/pablo1901/dj-pablo-on-stage-29",
+      "publishedAt": "2026-06-12T17:59:59.000Z",
+      "duration": "00:58:28",
+      "durationSeconds": 3508,
+      "artwork": "https://i1.sndcdn.com/artworks-fKXNlZTqEnaystxT-csfQDw-t500x500.jpg",
+      "show": "Mix"
+    },
+    {
+      "id": "tag:soundcloud,2010:tracks/2333549351",
+      "title": "DJ Pablo on Stage 28 | Melodic Techno, Trance, Tech House & Peak Time Mix",
+      "url": "https://soundcloud.com/pablo1901/dj-pablo-on-stage-28",
+      "publishedAt": "2026-06-05T18:00:23.000Z",
+      "duration": "01:01:50",
+      "durationSeconds": 3710,
+      "artwork": "https://i1.sndcdn.com/artworks-eDNQjth9iYfy6eFE-8QMzlQ-t500x500.jpg",
+      "show": "Mix"
+    },
+    {
+      "id": "tag:soundcloud,2010:tracks/2329155227",
+      "title": "DJ Pablo on Stage 27 | Melodic Techno, Trance, Tech House & Peak Time Mix",
+      "url": "https://soundcloud.com/pablo1901/dj-pablo-on-stage-27",
+      "publishedAt": "2026-05-29T18:00:56.000Z",
+      "duration": "01:01:25",
+      "durationSeconds": 3685,
+      "artwork": "https://i1.sndcdn.com/artworks-bnk7swmyXAznszw6-VZt5xA-t500x500.jpg",
+      "show": "Mix"
+    },
+    {
+      "id": "tag:soundcloud,2010:tracks/2312831378",
+      "title": "DJ Pablo on Stage 26 | Melodic Techno, Trance, Tech House & Peak Time Mix",
+      "url": "https://soundcloud.com/pablo1901/dj-pablo-on-stage-26",
+      "publishedAt": "2026-05-01T18:00:37.000Z",
+      "duration": "02:02:25",
+      "durationSeconds": 7345,
+      "artwork": "https://i1.sndcdn.com/artworks-W2eqAYyso2NSlDjM-BCPhcg-t500x500.jpg",
+      "show": "Mix"
+    },
+    {
+      "id": "tag:soundcloud,2010:tracks/2294564708",
+      "title": "DJ Pablo on Stage 25 | Melodic Techno, Trance, Tech House & Peak Time Mix",
+      "url": "https://soundcloud.com/pablo1901/dj-pablo-on-stage-25",
+      "publishedAt": "2026-04-03T18:00:41.000Z",
+      "duration": "02:03:29",
+      "durationSeconds": 7409,
+      "artwork": "https://i1.sndcdn.com/artworks-AZ0S6IwvFumuEmdV-OQ8gxg-t500x500.jpg",
+      "show": "Mix"
+    },
+    {
+      "id": "tag:soundcloud,2010:tracks/2278346129",
+      "title": "DJ Pablo on Stage 24 - Melodic Techno/Trance, Tech House & Peak Time Mix",
+      "url": "https://soundcloud.com/pablo1901/dj-pablo-on-stage-24",
+      "publishedAt": "2026-03-06T19:00:26.000Z",
+      "duration": "02:02:24",
+      "durationSeconds": 7344,
+      "artwork": "https://i1.sndcdn.com/artworks-LyoimZuztUSlbMxr-zGz8OQ-t500x500.jpg",
+      "show": "Mix"
+    },
+    {
+      "id": "tag:soundcloud,2010:tracks/2260101824",
+      "title": "DJ Pablo on Stage 23 - Melodic Techno/Trance, Tech House & Peak Time Mix",
+      "url": "https://soundcloud.com/pablo1901/dj-pablo-on-stage-23",
+      "publishedAt": "2026-02-06T19:01:04.000Z",
+      "duration": "02:02:55",
+      "durationSeconds": 7375,
+      "artwork": "https://i1.sndcdn.com/artworks-zGBNwQzllkVanKNF-UTecHA-t500x500.jpg",
+      "show": "Mix"
+    },
+    {
+      "id": "tag:soundcloud,2010:tracks/2244173657",
+      "title": "DJ Pablo on Stage 22 - Melodic Techno/Trance, Tech House & Peak Time Mix",
+      "url": "https://soundcloud.com/pablo1901/dj-pablo-on-stage-22",
+      "publishedAt": "2026-01-09T19:00:39.000Z",
+      "duration": "01:59:28",
+      "durationSeconds": 7168,
+      "artwork": "https://i1.sndcdn.com/artworks-fgMcF0T6DWCA9zx1-yi3Diw-t500x500.jpg",
+      "show": "Mix"
+    },
+    {
+      "id": "tag:soundcloud,2010:tracks/2232829592",
+      "title": "DJ Pablo on Stage - Melodic Techno/Trance, Tech House & Peak Time Mix | Yearmix 2025",
+      "url": "https://soundcloud.com/pablo1901/yearmix2025",
+      "publishedAt": "2025-12-26T19:00:02.000Z",
+      "duration": "02:40:52",
+      "durationSeconds": 9652,
+      "artwork": "https://i1.sndcdn.com/artworks-aw4N2vLzV7NyaygS-lZbWyg-t500x500.jpg",
+      "show": "Mix"
+    },
+    {
+      "id": "tag:soundcloud,2010:tracks/2228167043",
+      "title": "Pablo's Melodic Mix EP. 11 | Melodic Techno, Trance & Progressive Mix",
+      "url": "https://soundcloud.com/pablo1901/pablos-melodic-mix-ep-11",
+      "publishedAt": "2025-12-12T19:01:03.000Z",
+      "duration": "00:59:47",
+      "durationSeconds": 3587,
+      "artwork": "https://i1.sndcdn.com/artworks-93u8BbhaOR4jAk7v-BNzaEw-t500x500.jpg",
+      "show": "Mix"
+    },
+    {
+      "id": "tag:soundcloud,2010:tracks/2212470821",
+      "title": "Pablo's Melodic Mix EP. 10 | Melodic Techno, Trance & Progressive Mix",
+      "url": "https://soundcloud.com/pablo1901/pablos-melodic-mix-ep-10",
+      "publishedAt": "2025-11-14T19:00:28.000Z",
+      "duration": "01:00:28",
+      "durationSeconds": 3628,
+      "artwork": "https://i1.sndcdn.com/artworks-OEwHXxBKU1QtPGID-B2uwnA-t500x500.jpg",
+      "show": "Mix"
+    },
+    {
+      "id": "tag:soundcloud,2010:tracks/2208139466",
+      "title": "DJ Pablo on Stage 20 - Melodic Techno/Trance, Tech House & Peak Time Mix | October 2025",
+      "url": "https://soundcloud.com/pablo1901/dj-pablo-on-stage-20",
+      "publishedAt": "2025-11-07T19:00:48.000Z",
+      "duration": "01:58:20",
+      "durationSeconds": 7100,
+      "artwork": "https://i1.sndcdn.com/artworks-f4DdLQRdhi5kd6EX-mCsW8w-t500x500.jpg",
+      "show": "Mix"
+    },
+    {
+      "id": "tag:soundcloud,2010:tracks/2181519419",
+      "title": "DJ Pablo on Stage 19 - Melodic Techno/Trance, Tech House & Peak Time Mix | September 2025",
+      "url": "https://soundcloud.com/pablo1901/dj-pablo-on-stage-19",
+      "publishedAt": "2025-10-03T18:00:51.000Z",
+      "duration": "01:59:58",
+      "durationSeconds": 7198,
+      "artwork": "https://i1.sndcdn.com/artworks-tizZJQ1Xy1iUr5LA-OhaFuA-t500x500.jpg",
+      "show": "Mix"
+    },
+    {
+      "id": "tag:soundcloud,2010:tracks/2169532794",
+      "title": "Pablo's Melodic Mix EP. 8 | Melodic Techno, Trance & Progressive Mix",
+      "url": "https://soundcloud.com/pablo1901/pablos-melodic-mix-ep-8",
+      "publishedAt": "2025-09-12T18:00:11.000Z",
+      "duration": "00:59:52",
+      "durationSeconds": 3592,
+      "artwork": "https://i1.sndcdn.com/artworks-Tn1EkElqENCHrgEV-KIJXeg-t500x500.jpg",
+      "show": "Mix"
+    },
+    {
+      "id": "tag:soundcloud,2010:tracks/2165476071",
+      "title": "DJ Pablo on Stage 18 - Melodic Techno/Trance, Tech House & Peak Time Mix | August 2025",
+      "url": "https://soundcloud.com/pablo1901/dj-pablo-on-stage-18",
+      "publishedAt": "2025-09-05T18:00:42.000Z",
+      "duration": "02:01:26",
+      "durationSeconds": 7286,
+      "artwork": "https://i1.sndcdn.com/artworks-vLTiUWqSeyE40bJf-62GF2A-t500x500.jpg",
+      "show": "Mix"
+    },
+    {
+      "id": "tag:soundcloud,2010:tracks/2148519135",
+      "title": "Pablo's Melodic Mix EP. 7 | Melodic Techno, Trance & Progressive Mix",
+      "url": "https://soundcloud.com/pablo1901/pablos-melodic-mix-ep-7",
+      "publishedAt": "2025-08-08T18:01:03.000Z",
+      "duration": "00:59:21",
+      "durationSeconds": 3561,
+      "artwork": "https://i1.sndcdn.com/artworks-HAko0Yr2Kd3ddTS1-vOlzVQ-t500x500.jpg",
+      "show": "Mix"
+    },
+    {
+      "id": "tag:soundcloud,2010:tracks/2139879714",
+      "title": "DJ Pablo on Stage 17 - Melodic Techno/Trance, Tech House & Peak Time Mix | July 2025",
+      "url": "https://soundcloud.com/pablo1901/dj-pablo-on-stage-17",
+      "publishedAt": "2025-08-01T18:00:26.000Z",
+      "duration": "01:59:15",
+      "durationSeconds": 7155,
+      "artwork": "https://i1.sndcdn.com/artworks-09qBSnIcnSj6fpqd-2MxCog-t500x500.jpg",
+      "show": "Mix"
+    },
+    {
+      "id": "tag:soundcloud,2010:tracks/2128067421",
+      "title": "Pablo's Melodic Mix EP. 6 | Melodic Techno, Trance & Progressive Mix",
+      "url": "https://soundcloud.com/pablo1901/pablos-melodic-mix-ep-6",
+      "publishedAt": "2025-07-11T18:00:17.000Z",
+      "duration": "00:59:57",
+      "durationSeconds": 3597,
+      "artwork": "https://i1.sndcdn.com/artworks-jFrc1rTo8Q87WxdT-TJ4t4Q-t500x500.jpg",
+      "show": "Mix"
+    },
+    {
+      "id": "tag:soundcloud,2010:tracks/2124455712",
+      "title": "DJ Pablo on Stage 16 - Melodic Techno/Trance, Tech House & Peak Time Mix | June 2025",
+      "url": "https://soundcloud.com/pablo1901/dj-pablo-on-stage-16",
+      "publishedAt": "2025-07-04T18:00:47.000Z",
+      "duration": "02:00:47",
+      "durationSeconds": 7247,
+      "artwork": "https://i1.sndcdn.com/artworks-Vw4gpl25mzSdnkLc-rO22GA-t500x500.jpg",
+      "show": "Mix"
+    },
+    {
+      "id": "tag:soundcloud,2010:tracks/2112706659",
+      "title": "Pablo's Melodic Mix EP. 5 | Melodic Techno, Trance & Progressive Mix",
+      "url": "https://soundcloud.com/pablo1901/pablos-melodic-mix-ep-5",
+      "publishedAt": "2025-06-13T18:00:43.000Z",
+      "duration": "00:59:32",
+      "durationSeconds": 3572,
+      "artwork": "https://i1.sndcdn.com/artworks-JfRR2pzDBhiAEeuB-UF5JyA-t500x500.jpg",
+      "show": "Mix"
+    },
+    {
+      "id": "tag:soundcloud,2010:tracks/2107232103",
+      "title": "DJ Pablo on Stage 15 - Melodic Techno/Trance, (Tech) House & Peak Time Mix | May 2025",
+      "url": "https://soundcloud.com/pablo1901/dj-pablo-on-stage-15",
+      "publishedAt": "2025-06-06T00:00:00.000Z",
+      "duration": "01:59:50",
+      "durationSeconds": 7190,
+      "artwork": "https://i1.sndcdn.com/artworks-driZTz1maOL6uvac-ugfFNQ-t500x500.jpg",
+      "show": "Mix"
+    },
+    {
+      "id": "tag:soundcloud,2010:tracks/2091253677",
+      "title": "Pablo's Melodic Mix EP. 4 | Melodic Techno, Trance & Progressive Mix",
+      "url": "https://soundcloud.com/pablo1901/pablos-melodic-mix-ep-4",
+      "publishedAt": "2025-05-09T00:00:00.000Z",
+      "duration": "01:00:15",
+      "durationSeconds": 3615,
+      "artwork": "https://i1.sndcdn.com/artworks-jfcnre8EPEUcRJ5A-x60osQ-t500x500.jpg",
+      "show": "Mix"
+    },
+    {
+      "id": "tag:soundcloud,2010:tracks/2087942163",
+      "title": "DJ Pablo on Stage 14 - Melodic Techno/Trance, (Tech) House & Peak Time Mix | April 2025",
+      "url": "https://soundcloud.com/pablo1901/dj-pablo-on-stage-14",
+      "publishedAt": "2025-05-02T00:00:00.000Z",
+      "duration": "02:01:03",
+      "durationSeconds": 7263,
+      "artwork": "https://i1.sndcdn.com/artworks-iR3R38SZTOTnoYbo-k7Xzvg-t500x500.jpg",
+      "show": "Mix"
+    },
+    {
+      "id": "tag:soundcloud,2010:tracks/2075707992",
+      "title": "Pablo's Melodic Mix EP. 3 | Melodic Techno, Trance & Progressive Mix",
+      "url": "https://soundcloud.com/pablo1901/pablos-melodic-mix-ep-3",
+      "publishedAt": "2025-04-11T18:00:55.000Z",
+      "duration": "00:59:48",
+      "durationSeconds": 3588,
+      "artwork": "https://i1.sndcdn.com/artworks-93eAWbaRJ0s5Ovu7-ToxRzg-t500x500.jpg",
+      "show": "Mix"
+    },
+    {
+      "id": "tag:soundcloud,2010:tracks/2070832048",
+      "title": "DJ Pablo on Stage 13 - Melodic Techno/Trance, (Tech) House & Peak Time Mix | March 2025",
+      "url": "https://soundcloud.com/pablo1901/dj-pablo-on-stage-13",
+      "publishedAt": "2025-04-04T00:00:00.000Z",
+      "duration": "01:59:25",
+      "durationSeconds": 7165,
+      "artwork": "https://i1.sndcdn.com/artworks-z0yERgdRH2fG46qb-xm8yng-t500x500.jpg",
+      "show": "Mix"
+    },
+    {
+      "id": "tag:soundcloud,2010:tracks/2046271481",
+      "title": "Pablo's Melodic Mix EP. 2 | Melodic Techno, Trance & Progressive Mix",
+      "url": "https://soundcloud.com/pablo1901/pablos-melodic-mix-ep-2",
+      "publishedAt": "2025-03-14T00:00:00.000Z",
+      "duration": "01:04:33",
+      "durationSeconds": 3873,
+      "artwork": "https://i1.sndcdn.com/artworks-2HYQydbr7eTkH4te-MtvvAw-t500x500.jpg",
+      "show": "Mix"
+    },
+    {
+      "id": "tag:soundcloud,2010:tracks/2048922080",
+      "title": "DJ Pablo on Stage 12 - Melodic Techno/Trance, (Tech) House & Peak Time Mix | February 2025",
+      "url": "https://soundcloud.com/pablo1901/dj-pablo-on-stage-12",
+      "publishedAt": "2025-03-07T00:00:00.000Z",
+      "duration": "01:59:32",
+      "durationSeconds": 7172,
+      "artwork": "https://i1.sndcdn.com/artworks-m6tsYeCzMlFYRDMw-5IimnQ-t500x500.jpg",
+      "show": "Mix"
+    },
+    {
+      "id": "tag:soundcloud,2010:tracks/2029080392",
+      "title": "Pablo's Melodic Mix EP. 1 | Melodic Techno, Trance & Progressive Mix",
+      "url": "https://soundcloud.com/pablo1901/pablos-melodic-mix-ep-1",
+      "publishedAt": "2025-02-08T00:00:00.000Z",
+      "duration": "00:56:33",
+      "durationSeconds": 3393,
+      "artwork": "https://i1.sndcdn.com/artworks-EPlHMD805liuLKsB-joSEZw-t500x500.jpg",
+      "show": "Mix"
+    },
+    {
+      "id": "tag:soundcloud,2010:tracks/2021747264",
+      "title": "DJ Pablo on Stage 11 - Melodic Techno/Trance, (Tech) House & Peak Time Mix | January 2025",
+      "url": "https://soundcloud.com/pablo1901/dj-pablo-on-stage-11",
+      "publishedAt": "2025-01-31T00:00:00.000Z",
+      "duration": "01:58:54",
+      "durationSeconds": 7134,
+      "artwork": "https://i1.sndcdn.com/artworks-I4pnyxlDOr1hLlY4-sI5T0w-t500x500.jpg",
+      "show": "Mix"
+    },
+    {
+      "id": "tag:soundcloud,2010:tracks/2005237607",
+      "title": "DJ Pablo on Stage 10 - Melodic Techno/Trance, (Tech) House & Peak Time Mix | December 2024",
+      "url": "https://soundcloud.com/pablo1901/dj-pablo-on-stage-10",
+      "publishedAt": "2025-01-09T00:00:00.000Z",
+      "duration": "01:57:49",
+      "durationSeconds": 7069,
+      "artwork": "https://i1.sndcdn.com/artworks-izZb8YT1o9u6yxhB-XkLBZg-t500x500.jpg",
+      "show": "Mix"
+    },
+    {
+      "id": "tag:soundcloud,2010:tracks/1991327019",
+      "title": "DJ Pablo on Stage - Melodic Techno/Trance, (Tech) House & Peak Time Mix | Yearmix 2024",
+      "url": "https://soundcloud.com/pablo1901/yearmix2024",
+      "publishedAt": "2024-12-21T00:00:00.000Z",
+      "duration": "02:20:54",
+      "durationSeconds": 8454,
+      "artwork": "https://i1.sndcdn.com/artworks-H6vERc4FXtyM5Zhw-0EPNSw-t500x500.jpg",
+      "show": "Mix"
+    },
+    {
+      "id": "tag:soundcloud,2010:tracks/1975428659",
+      "title": "DJ Pablo on Stage 9 - Melodic Techno/Trance, (Tech) House & Peak Time Mix | November 2024",
+      "url": "https://soundcloud.com/pablo1901/dj-pablo-on-stage-9",
+      "publishedAt": "2024-12-06T00:00:00.000Z",
+      "duration": "01:59:07",
+      "durationSeconds": 7147,
+      "artwork": "https://i1.sndcdn.com/artworks-5moDHj7CobzEqtsm-7on7RQ-t500x500.jpg",
+      "show": "Mix"
+    },
+    {
+      "id": "tag:soundcloud,2010:tracks/1946886923",
+      "title": "DJ Pablo on Stage 8 - Melodic Techno, (Tech) House & (Peak Time) Mix | October 2024",
+      "url": "https://soundcloud.com/pablo1901/dj-pablo-on-stage-8",
+      "publishedAt": "2024-11-01T00:00:00.000Z",
+      "duration": "01:55:38",
+      "durationSeconds": 6938,
+      "artwork": "https://i1.sndcdn.com/artworks-WNlISATLgBzyutaU-i2GRAw-t500x500.jpg",
+      "show": "Mix"
+    }
+  ],
+  "fetchedAt": "2026-10-29T01:17:37.265Z",
+  "source": "https://feeds.soundcloud.com/users/soundcloud:users:339829584/sounds.rss"
+}

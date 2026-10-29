@@ -10,12 +10,20 @@ const SESSION_TTL_MS = 7 * 24 * 60 * 60 * 1000;
 const MAX_COVER_BYTES = 1_500_000;
 const MAX_BODY_CHARS = 3_000_000;
 
-// Single admin account. Only a salted PBKDF2 hash is stored here — never the password.
+// Single admin account. Only a salted hash is stored here — never the password.
 // Regenerate with: node scripts/hash-password.mjs "new password"
+//
+// mode 'client-pbkdf2' — the browser derives PBKDF2-SHA256(password) and this
+//   Worker hashes that key once. Full PBKDF2 strength, microseconds of CPU, so
+//   it fits the Workers free plan's 10ms budget (a server-side PBKDF2 run blows
+//   it and fails with error 1102). Offline guessing still costs an attacker a
+//   full PBKDF2 per attempt, so the hash in this repo stays expensive to crack.
+// mode 'pbkdf2' — legacy server-side PBKDF2, needs the Workers paid plan.
 const ADMIN = {
   username: 'pablo',
-  salt: 'IF1PhPMRV1lsUszhMEL/Qw==',
-  hash: '7S4DVjszWywmUAxE/VTe6fYqMKogDAESbeTyRVSQLcI=',
+  mode: 'client-pbkdf2',
+  salt: 'GVSgw/zz3Dx5MY1enSn3yQ==',
+  hash: 'RuryeTDacUmdVabdYbrtqrxUlF+MSpvarC7FM69dy7c=',
   iterations: 210000,
 };
 
@@ -60,6 +68,17 @@ async function sha256Hex(value) {
     .join('');
 }
 
+function bytesToBase64(bytes) {
+  let binary = '';
+  for (const byte of bytes) binary += String.fromCharCode(byte);
+  return btoa(binary);
+}
+
+async function sha256Base64(bytes) {
+  const digest = await crypto.subtle.digest('SHA-256', bytes);
+  return bytesToBase64(new Uint8Array(digest));
+}
+
 function constantTimeEqual(a, b) {
   if (typeof a !== 'string' || typeof b !== 'string') return false;
   if (a.length !== b.length) return false;
@@ -70,13 +89,33 @@ function constantTimeEqual(a, b) {
   return diff === 0;
 }
 
-async function verifyCredentials(username, password) {
-  if (typeof username !== 'string' || typeof password !== 'string') return false;
-  if (!username || !password || username.length > 80 || password.length > 200) {
+async function verifyCredentials(username, password, key) {
+  if (typeof username !== 'string' || !username || username.length > 80) {
     return false;
   }
 
-  const key = await crypto.subtle.importKey(
+  const usernameOk = constantTimeEqual(username, ADMIN.username) ? 1 : 0;
+
+  if (ADMIN.mode === 'client-pbkdf2') {
+    // `key` is the base64 PBKDF2 output computed in the browser. Never fall back
+    // to accepting the raw password here: that would be a weaker credential.
+    if (typeof key !== 'string' || !key || key.length > 100) return false;
+    let bytes;
+    try {
+      bytes = bytesFromBase64(key);
+    } catch {
+      return false;
+    }
+    if (bytes.length !== 32) return false;
+    const digest = await sha256Base64(bytes);
+    return Boolean((constantTimeEqual(digest, ADMIN.hash) ? 1 : 0) & usernameOk);
+  }
+
+  if (typeof password !== 'string' || !password || password.length > 200) {
+    return false;
+  }
+
+  const material = await crypto.subtle.importKey(
     'raw',
     encoder.encode(password),
     'PBKDF2',
@@ -91,7 +130,7 @@ async function verifyCredentials(username, password) {
         iterations: ADMIN.iterations,
         hash: 'SHA-256',
       },
-      key,
+      material,
       256,
     ),
   );
@@ -102,9 +141,11 @@ async function verifyCredentials(username, password) {
   for (let i = 0; i < length; i += 1) {
     passwordOk &= bits[i] === expected[i] ? 1 : 0;
   }
-  const usernameOk = constantTimeEqual(username, ADMIN.username) ? 1 : 0;
   return Boolean(passwordOk & usernameOk);
 }
+
+// Exposed for scripts/test-auth.mjs; not used by the Worker itself.
+export const __auth = { verifyCredentials, sha256Base64, ADMIN };
 
 /* -------------------------------------------------------------------- db */
 
@@ -280,7 +321,11 @@ async function handleLogin(request, env, url) {
   const parsed = await readBody(request);
   if (parsed.error) return parsed.error;
 
-  const ok = await verifyCredentials(parsed.data.username, parsed.data.password);
+  const ok = await verifyCredentials(
+    parsed.data.username,
+    parsed.data.password,
+    parsed.data.key,
+  );
   if (!ok) {
     recordFailure(key);
     return json({ error: 'Invalid username or password.' }, 401);
@@ -661,6 +706,16 @@ async function handleAdmin(request, env, url) {
   if (pathname === '/api/admin/session' && method === 'GET') {
     const session = await readSession(request, env);
     return json({ authenticated: Boolean(session) });
+  }
+
+  if (pathname === '/api/admin/login-params' && method === 'GET') {
+    // Public on purpose: the salt and iteration count are not secrets, and the
+    // browser needs them to derive the key before signing in.
+    return json({
+      mode: ADMIN.mode,
+      salt: ADMIN.mode === 'client-pbkdf2' ? ADMIN.salt : null,
+      iterations: ADMIN.mode === 'client-pbkdf2' ? ADMIN.iterations : null,
+    });
   }
 
   if (pathname === '/api/admin/login' && method === 'POST') {

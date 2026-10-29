@@ -145,7 +145,7 @@ async function verifyCredentials(username, password, key) {
 }
 
 // Exposed for scripts/test-auth.mjs; not used by the Worker itself.
-export const __auth = { verifyCredentials, sha256Base64, ADMIN };
+export const __auth = { verifyCredentials, sha256Base64, coverBytes, ADMIN };
 
 /* -------------------------------------------------------------------- db */
 
@@ -160,7 +160,7 @@ function ensureSchema(env) {
         title TEXT NOT NULL,
         release_date TEXT NOT NULL DEFAULT '',
         links TEXT NOT NULL DEFAULT '[]',
-        cover BLOB,
+        cover TEXT,
         cover_type TEXT,
         created_at INTEGER NOT NULL,
         updated_at INTEGER NOT NULL
@@ -171,7 +171,7 @@ function ensureSchema(env) {
         artist TEXT NOT NULL DEFAULT '',
         release_date TEXT NOT NULL DEFAULT '',
         url TEXT NOT NULL DEFAULT '',
-        cover BLOB,
+        cover TEXT,
         cover_type TEXT,
         created_at INTEGER NOT NULL,
         updated_at INTEGER NOT NULL
@@ -399,28 +399,53 @@ function cleanLinks(input) {
 }
 
 function decodeCover(input) {
-  if (!input || !input.data) return { bytes: null, type: null };
+  if (!input || !input.data) return { data: null, type: null };
   const type = String(input.type || '');
   if (!COVER_TYPES.includes(type)) {
     return { error: 'Use a JPEG, PNG or WebP cover.' };
   }
   try {
-    const base64 = String(input.data).replace(/^data:[^;]+;base64,/, '');
+    const base64 = String(input.data)
+      .replace(/^data:[^;]+;base64,/, '')
+      .replace(/\s+/g, '');
     const bytes = bytesFromBase64(base64);
-    if (!bytes.length) return { bytes: null, type: null };
+    if (!bytes.length) return { data: null, type: null };
     if (bytes.length > MAX_COVER_BYTES) {
       return { error: 'Cover is too large (max 1.5 MB after resizing).' };
     }
-    return {
-      bytes: bytes.buffer.slice(
-        bytes.byteOffset,
-        bytes.byteOffset + bytes.byteLength,
-      ),
-      type,
-    };
+    // Store base64 text, not binary: binding an ArrayBuffer does not survive the
+    // D1 round-trip (it comes back as a list of byte values), which served
+    // covers as broken images. Re-encoding also normalises the padding.
+    return { data: bytesToBase64(bytes), type };
   } catch {
     return { error: 'Cover could not be read.' };
   }
+}
+
+function coverBytes(stored) {
+  if (typeof stored === 'string') {
+    const trimmed = stored.trim();
+    if (!trimmed) return null;
+    // Rows written before this fix hold "[137, 80, 78, ...]" — rebuild them.
+    if (trimmed.startsWith('[')) {
+      try {
+        const list = JSON.parse(trimmed);
+        return Array.isArray(list) ? Uint8Array.from(list) : null;
+      } catch {
+        return null;
+      }
+    }
+    try {
+      return bytesFromBase64(trimmed);
+    } catch {
+      return null;
+    }
+  }
+  if (stored instanceof ArrayBuffer) return new Uint8Array(stored);
+  if (ArrayBuffer.isView(stored)) {
+    return new Uint8Array(stored.buffer, stored.byteOffset, stored.byteLength);
+  }
+  return null;
 }
 
 function releasePayload(body) {
@@ -487,7 +512,10 @@ async function serveStoredCover(env, table, id) {
 
   if (!row || !row.cover) return new Response('Not found', { status: 404 });
 
-  return new Response(row.cover, {
+  const bytes = coverBytes(row.cover);
+  if (!bytes || !bytes.length) return new Response('Not found', { status: 404 });
+
+  return new Response(bytes, {
     headers: {
       'content-type': COVER_TYPES.includes(row.cover_type)
         ? row.cover_type
@@ -526,7 +554,7 @@ async function createRelease(request, env) {
       payload.title,
       payload.releaseDate,
       JSON.stringify(payload.links),
-      payload.cover.bytes,
+      payload.cover.data,
       payload.cover.type,
       now,
       now,
@@ -559,9 +587,9 @@ async function updateRelease(request, env, id) {
     now,
   ];
 
-  if (payload.cover.bytes) {
+  if (payload.cover.data) {
     fields.push('cover = ?', 'cover_type = ?');
-    values.push(payload.cover.bytes, payload.cover.type);
+    values.push(payload.cover.data, payload.cover.type);
   }
 
   values.push(id);
@@ -626,7 +654,7 @@ async function createFavourite(request, env) {
 
   const payload = favouritePayload(parsed.data);
   if (payload.error) return json({ error: payload.error }, 400);
-  if (!payload.cover.bytes) return json({ error: 'Add a cover image.' }, 400);
+  if (!payload.cover.data) return json({ error: 'Add a cover image.' }, 400);
 
   const id = crypto.randomUUID();
   const now = Date.now();
@@ -642,7 +670,7 @@ async function createFavourite(request, env) {
       payload.artist,
       payload.releaseDate,
       payload.url,
-      payload.cover.bytes,
+      payload.cover.data,
       payload.cover.type,
       now,
       now,
@@ -673,9 +701,9 @@ async function updateFavourite(request, env, id) {
     Date.now(),
   ];
 
-  if (payload.cover.bytes) {
+  if (payload.cover.data) {
     fields.push('cover = ?', 'cover_type = ?');
-    values.push(payload.cover.bytes, payload.cover.type);
+    values.push(payload.cover.data, payload.cover.type);
   }
 
   values.push(id);

@@ -70,7 +70,54 @@ function authHeaders(headers = {}) {
 
 init();
 
+// The Worker compares a hash of a browser-derived PBKDF2 key instead of running
+// PBKDF2 itself: a full server-side derivation outruns the Workers free plan's
+// 10ms CPU budget and the request dies before the password is ever checked.
+let loginParams = null;
+
+async function loadLoginParams() {
+  try {
+    const response = await fetch('/api/admin/login-params', {
+      headers: { accept: 'application/json' },
+    });
+    loginParams = response.ok ? await response.json() : null;
+  } catch {
+    loginParams = null;
+  }
+}
+
+async function deriveLoginKey(password, params) {
+  const binary = atob(params.salt);
+  const salt = new Uint8Array(binary.length);
+  for (let i = 0; i < binary.length; i += 1) salt[i] = binary.charCodeAt(i);
+
+  const material = await crypto.subtle.importKey(
+    'raw',
+    new TextEncoder().encode(password),
+    'PBKDF2',
+    false,
+    ['deriveBits'],
+  );
+  const bits = new Uint8Array(
+    await crypto.subtle.deriveBits(
+      {
+        name: 'PBKDF2',
+        salt,
+        iterations: params.iterations,
+        hash: 'SHA-256',
+      },
+      material,
+      256,
+    ),
+  );
+
+  let out = '';
+  for (const byte of bits) out += String.fromCharCode(byte);
+  return btoa(out);
+}
+
 async function init() {
+  await loadLoginParams();
   try {
     const response = await fetch('/api/admin/session', {
       headers: authHeaders({ accept: 'application/json' }),
@@ -190,13 +237,17 @@ loginForm.addEventListener('submit', async (event) => {
   const data = new FormData(loginForm);
 
   try {
+    const payload = { username: data.get('username') };
+    if (loginParams && loginParams.mode === 'client-pbkdf2') {
+      payload.key = await deriveLoginKey(String(data.get('password') || ''), loginParams);
+    } else {
+      payload.password = data.get('password');
+    }
+
     const response = await fetch('/api/admin/login', {
       method: 'POST',
       headers: { 'content-type': 'application/json', accept: 'application/json' },
-      body: JSON.stringify({
-        username: data.get('username'),
-        password: data.get('password'),
-      }),
+      body: JSON.stringify(payload),
     });
     const body = await response.json().catch(() => ({}));
     if (!response.ok) {
